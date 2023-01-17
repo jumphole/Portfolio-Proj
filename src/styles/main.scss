@@ -5,8 +5,312 @@
 @import "variables";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-// Write your sass code here or import partials
+$hover-color-menu: rgb(153, 134, 134);
 
-h1 {
-  color: tomato;
+* {
+  // border: solid 1px green;
+}
+
+body {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  background-position-x: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-color: rgb(179, 174, 174);
+}
+
+.home {
+  background-image: url("/images/Foto Studio29/Ste/IMG_7240.jpg");
+}
+.studio {
+  background-image: url("/images/Foto Studio29/Ste/IMG_7239.jpg");
+}
+.about {
+  background-image: url("/images/Foto Studio29/Ste/P1059868-2.jpg");
+  background-size: cover;
+}
+
+header {
+  width: 100%;
+
+  nav {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    color: rgb(240, 235, 235);
+
+    div a {
+      padding: 1rem;
+      white-space: nowrap;
+    }
+  }
+  a {
+    color: rgb(97, 86, 86);
+    text-decoration: none;
+    opacity: 80;
+    font-size: 1.5rem;
+    transition: 1s;
+  }
+  nav a:hover {
+    color: rgb(226, 222, 222);
+    background-color: $hover-color-menu;
+    border-radius: 13%;
+    padding: 1rem;
+  }
+}
+
+#menu-button,
+#button-container {
+  display: none;
+}
+
+.home-text {
+  display: none;
+}
+
+.hero {
+  text-align: left;
+  width: 10rem;
+  flex-grow: 1;
+  color: black;
+  font-size: 1.5rem;
+  a:hover {
+    background-color: transparent;
+  }
+}
+
+.hero-b {
+  text-align: left;
+  width: 10rem;
+  margin-left: 2rem;
+  flex-grow: 1;
+  color: rgb(218, 211, 211);
+}
+
+main {
+  h1 {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: rgb(187, 185, 185);
+  }
+  h1.title {
+    // border: solid 1px red;
+    margin-top: 7rem;
+    color: black;
+  }
+}
+
+.gallery {
+  // border: solid red;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 5rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-top: 6rem;
+
+  div {
+    background-size: cover;
+    // border: solid 1px rgba(255, 102, 0, 0.548);
+    width: auto;
+    border-radius: 3%;
+    height: 15rem;
+    // border-radius: 5%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    transition: all 2s;
+  }
+  div:hover {
+    transform: scale(1.4);
+    z-index: 1;
+  }
+
+  div:nth-child(1) {
+    background-image: url("/images/Foto Studio29/Ste/Panoramica_senza titolo1.jpg");
+  }
+
+  div:nth-child(2) {
+    background-image: url("/images/Foto Studio29/Ste/IMG_7282.jpg");
+  }
+  div:nth-child(3) {
+    background-image: url("/images/Foto Studio29/Ste/IMG_7284.jpg");
+  }
+  div:nth-child(4) {
+    background-image: url("/images/Foto Studio29/Ste/IMG_2152.jpg");
+  }
+  div:nth-child(5) {
+    background-image: url("/images/Foto Studio29/Ste/IMG_2147.jpg");
+  }
+  div:nth-child(6) {
+    background-image: url("/images/Foto Studio29/Ste/IMG_2128.jpg");
+  }
+}
+
+.bio {
+  // border: solid 1px red;
+  text-align: center;
+  align-items: center;
+  font-size: 2rem;
+  margin-top: 10rem;
+  color: rgb(206, 191, 191);
+}
+
+.contact {
+  background-image: url("/images/Foto Studio29/Ste/dadi.jpg");
+  background-size: cover;
+}
+
+.contact-b {
+  
+  color: rgb(59, 59, 58);
+  text-align: center;
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+
+  div:nth-child(1) {
+    margin-top: 7rem;
+  }
+
+  div:nth-child(3) {
+    margin-top: 7rem;
+  }
+}
+
+.portfolio,
+.contact {
+  h1 {
+    color: rgb(94, 91, 91);
+  }
+}
+
+.portfolio-b {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 5rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+
+  div {
+    background-size: cover;
+    width: auto;
+    height: 15rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    transition: all 1s;
+    box-shadow: 0.5rem 0.5rem 0.5rem 0.1rem rgba(105, 41, 41, 0.541);
+  }
+  div:hover {
+    transform: scale(1.2);
+  }
+  div:nth-child(1) {
+    background-image: url("/images/portfolio/Screenshot\ from\ 2023-01-17\ 14-53-27.png");
+  }
+
+  div:nth-child(2) {
+    background-image: url("/images/portfolio/Screenshot\ from\ 2023-01-17\ 14-46-10.png");
+  }
+  div:nth-child(3) {
+    background-image: url("/images/portfolio/Screenshot\ from\ 2023-01-17\ 14-42-51.png");
+  }
+  div:nth-child(4) {
+    background-image: url("/images/portfolio/Screenshot\ from\ 2023-01-17\ 14-44-54.png");
+  }
+}
+
+.port-a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  p {
+    display: flex; //obbligatorio
+    flex-direction: column; // obbligatorio
+    justify-content: center; // verticale
+    align-items: center; // orizzintale
+    height: 100%; // stessa del suo contenitore
+    color: rgb(161, 158, 158);
+    // border: solid 1px yellow;
+  }
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  // border: solid 1px red;
+  height: 4rem;
+}
+
+#menu-button {
+  background-color: transparent;
+}
+
+@media (max-width: 840px) {
+  nav div {
+    display: none;
+  }
+
+  #button-container {
+    // display: block;
+    display: flex; //obbligatorio
+    flex-direction: column; // obbligatorio
+    justify-content: center; // verticale
+    align-items: center; // orizzintale
+    background-color: rgba(128, 128, 128, 0.582);
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5%;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgb(179, 168, 168);
+    }
+  }
+  #menu-button:checked ~ nav div {
+    display: flex;
+    background-color: rgba(12, 12, 12, 0.911);
+    width: 100%;
+    // margin-bottom: 0.5rem;
+    border-bottom: 1px solid grey;
+
+    a {
+      color: white;
+      width: 100%;
+      border-radius: 0%;
+    }
+  }
+  nav {
+    position: absolute;
+    top: 0;
+    margin-top: 70px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+
+  .hero {
+    a:hover {
+      background-color: $hover-color-menu;
+  }
+
+  .home-logo {
+    display: none;
+  }
+  .home-text {
+    display: inline;
+  }
+}
 }
